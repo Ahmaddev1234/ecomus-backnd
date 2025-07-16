@@ -1,6 +1,6 @@
 const express=require('express');
 const router=express.Router();
-const bcrypt=require('bcrypt');
+const bcrypt=require('bcryptjs');
 const usersSchema=require('../models/usersModel');
 const productsSchema=require('../models/productsModel')
 const {generateToken}=require('../utils/generateToken')
