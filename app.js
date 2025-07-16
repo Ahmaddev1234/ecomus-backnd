@@ -33,7 +33,6 @@ app.use("/products", products);
 app.use("/owners", owners);
 
 
-connection();
 
 
 app.listen(PORT, () => {
