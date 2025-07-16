@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3000;
 
 const allowedOrigins = [
   "http://localhost:5173",  
-  "https://ecomus-tan.vercel.app/", 
+  "https://ecomus-tan.vercel.app", 
 ];
 
 app.use(cors({
