@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
             stock: product.stock,
             discount: product.discount,
             category: product.category,
-            imageUrl: `http://localhost:3000/products/${product._id}/image` 
+            imageUrl: `https://ecomus-backnd-production.up.railway.app/products/${product._id}/image` 
         }));
 
         return responseFunction(res, 200, "Data is fetched", formattedData, true);
@@ -57,7 +57,7 @@ router.get('/checkout/:id',async(req,res)=>{
         stock: product.stock,
         discount: product.discount,
         category: product.category,
-        imgUrl:`http://localhost:3000/products/${product._id}/image`
+        imgUrl:`https://ecomus-backnd-production.up.railway.app/products/${product._id}/image`
     }
     return responseFunction(res,200,"Here is your product",formattedData,true)
     }
@@ -82,7 +82,7 @@ router.get("/categories/:id", async (req, res) => {
             stock: product.stock,
             discount: product.discount,
             category: product.category,
-            imageUrl: `http://localhost:3000/products/${product._id}/image` 
+            imageUrl: `https://ecomus-backnd-production.up.railway.app/products/${product._id}/image` 
         }));
 
         return responseFunction(res, 200, "Data is fetched", formattedData, true);
