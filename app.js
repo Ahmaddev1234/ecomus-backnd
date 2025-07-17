@@ -21,6 +21,8 @@ const allowedOrigins = [
 app.use(cors({
   origin: allowedOrigins,
   credentials: true,
+  secure: true,          
+  sameSite: 'None'
 }));
 
 app.use(cookieParser());
