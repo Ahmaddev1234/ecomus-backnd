@@ -139,7 +139,7 @@ router.get('/cart', checkAuth, async (req, res) => {
                 category: product.category,
                 quantity: cartItem?.quantity || 1, 
                 cartItemId: cartItem?._id, 
-                imageUrl: `http://localhost:3000/products/${product._id}/image`
+                imageUrl: `https://ecomus-backnd-production.up.railway.app/products/${product._id}/image`
             };
         });
 
