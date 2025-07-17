@@ -32,7 +32,12 @@ router.post('/signup', (req,res)=>{
         })
         await user.save();
         const token=generateToken(user);
-        res.cookie('token',token);
+        res.cookie('token', token, {
+            httpOnly: true,
+            secure: true,
+            sameSite: 'None'
+          });
+          
         return responseFunction(res,200,"Signup successfull",user,true);
     }
     }
@@ -72,7 +77,12 @@ router.post('/login',async(req,res)=>{
             }
             else{
                 const token=generateToken(user);
-                res.cookie('token',token);
+                res.cookie('token', token, {
+                    httpOnly: true,
+                    secure: true,
+                    sameSite: 'None'
+                  });
+                  
                 return responseFunction(res,200,"Successfully logged in",user,true);
             }
         }
